@@ -2,12 +2,14 @@ def main():
     list_of_months = ["January", "February", "March", "April", "May", "June",
                       "July", "August", "September", "October", "November", "December"
                       ]
-    date = input_date()
+    date = input("Date: ")
+    date = date.strip()
     try:
         if date[-5] == "/":
             m, d, y = date.strip().split("/")
             if not m.isdigit():
-                input_date()
+                date = input("Date: ")
+                date = date.strip()
 
             else:
                 m = int(m)
@@ -16,9 +18,13 @@ def main():
                 print(f"{y}-{m:02}-{d:02}")
                 exit()
             else:
-                input_date()
+                date = input("Date: ")
+                date = date.strip()
 
         else:
+            # m = ""
+            # y = ""
+            # d = ""
             try:
                 date = date.strip()
                 m, d, y = date.split(" ")
@@ -26,15 +32,18 @@ def main():
                 d = d.strip()
                 y = y.strip()
                 if date[-6] != ",":
-                    input_date()
+                    date = input("Date: ")
+                    date = date.strip()
                 else:
                     d = d.replace(",", "")
                     if not d.isdigit():
-                        input_date()
+                        date = input("Date: ")
+                        date = date.strip()
                     else:
                         d = int(d)
                 if not 0 < d < 32:
-                    input_date()
+                    date = input("Date: ")
+                    date = date.strip()
 
                 if m.find(","):
                     m = m.replace(",", "")
@@ -44,13 +53,10 @@ def main():
             finally:
                 exit()
     except ValueError:
-        input_date()
-
-
-def input_date():
-    date = input("Date: ")
-    date = date.strip()
-    return date
+        date = input("Date: ")
+        date = date.strip()
 
 
 main()
+
+

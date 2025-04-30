@@ -7,21 +7,18 @@ def main():
     print("Welcom to spelling bee")
     print("Your letters are: A I P C R H G")
 
-    # while len(WORDS) > 0:
-    #     print(f"{len(WORDS)} words lelf!")
-    #     guess = input("Guess word: ")
-    #
-    #     if guess.strip().upper() == "GRAPHIC":
-    #         WORDS.clear()
-    #         print("You have won!")
-    #     if guess.strip().upper() in WORDS:
-    #         points = WORDS.pop(guess)
-    #
-    #         print(f"Good job! You scored{points} points")
-    # print("That's the game")
+    while len(WORDS) > 0:
+        print(f"{len(WORDS)} words lelf!")
+        guess = input("Guess word: ")
 
-    for i in WORDS:
-        print(f"{WORDS(i)} {WORDS[i]}")
+        if guess.strip().upper() == "GRAPHIC":
+            WORDS.clear()
+            print("You have won!")
+        if guess.strip().upper() in WORDS:
+            points = WORDS.pop(guess)
+
+            print(f"Good job! You scored{points} points")
+    print("That's the game")
 
 
 if __name__ == '__main__':

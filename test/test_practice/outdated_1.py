@@ -1,3 +1,5 @@
+# This version was submitted as final one.
+
 def main():
     list_of_months = ["January", "February", "March", "April", "May", "June",
                       "July", "August", "September", "October", "November", "December"
