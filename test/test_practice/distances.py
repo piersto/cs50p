@@ -1,6 +1,6 @@
 distances = {
     "voyager": "163",
-    "pioner": "80 au"
+    "pioner": "80"
     }
 
 
@@ -20,7 +20,7 @@ def main():
 
 
 def convert(au):
-    return (au * 149597870700)
+    return au * 149597870700
 
 
 if __name__ == '__main__':

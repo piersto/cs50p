@@ -5,3 +5,7 @@ def test_argument():
     assert hello("Pierre") == "Hello, Pierre"
 
 
+def test_default():
+    assert hello() == "Hello, world"
+
+
