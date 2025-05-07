@@ -1,6 +1,13 @@
-s = input("Input: ")
+# def main():
+#
+#     word = input("Input: ")
+#     print(shorten(word))
 
-t = list(s)
+
+# def shorten():
+word = "ahotenusis"
+t = list(word)
+shorten_word = ""
 
 for j in t:
     if j == "i" \
@@ -15,4 +22,10 @@ for j in t:
             or j == "u":
         pass
     else:
-        print(j, end="")
+        shorten_word.join(j)
+        print(shorten_word)
+print (shorten_word)
+#
+#
+# if __name__ == '__main__':
+#     main()
