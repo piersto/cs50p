@@ -1,4 +1,4 @@
-d = {
+my_dictionary = {
 	"data": {
 		"id": "bitcoin",
 		"priceUsd": "95472.4767167458286341",
@@ -8,14 +8,14 @@ d = {
 }
 
 # From dictionary "d" take "data" as dictionary
-list_from_dictionary = d["data"]
+list_from_dictionary = my_dictionary["data"]
 # From "data" dic take value of the key "priceUsd" as float
 price_usd = float(list_from_dictionary["priceUsd"])
 
 # The same but in one line
-p_usd_one_line = d["data"]["priceUsd"]
+p_usd_one_line = my_dictionary["data"]["priceUsd"]
 
 # Print price_usd with 4 digits after decimal
 print(f"${price_usd:,.4f}")
 print(p_usd_one_line)
-print(d["timestamp"])
+print(my_dictionary["timestamp"])
