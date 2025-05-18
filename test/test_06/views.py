@@ -5,7 +5,7 @@ from PIL import Image
 
 
 def main():
-    with open("C:\PROJECTS\PYTHON\CX50P\/views.csv", "r", encoding='utf-8') as views,\
+    with open("/hlam/views.csv", "r", encoding='utf-8') as views,\
             open("analysis.csv", "w") as analysis:
         reader = csv.DictReader(views)
         # reader in it has the fieldnames (as a list), so we can get them at this way

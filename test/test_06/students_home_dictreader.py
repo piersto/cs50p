@@ -2,7 +2,7 @@ import csv
 
 students = []
 
-with open("C:\PROJECTS\PYTHON\CX50P\students.csv") as file:
+with open("/hlam/students.csv") as file:
     reader = csv.DictReader(file)
     for row in reader:
         students.append({"name": row["name"], "home": row["home"]})

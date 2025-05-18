@@ -1,13 +1,8 @@
-def test_twitter():
+def test_test():
 
-    s = "ahotenusi"
-    l = list(s)
-    tw_as_list = []
-    letters_to_be_excluded = ["a", "o", "e", "u", "i", "y"]
+    time_start = 0
+    inserted_time = "9:00 AM to 5:00 PM"
+    if "AM" in inserted_time:
+        time_start = int(inserted_time[0:1])
 
-    for i in range(len(l)):
-        if l[i] not in letters_to_be_excluded:
-            tw_as_list.append(l[i])
-
-    print(tw_as_list)
-    print(''.join(tw_as_list))
+    print(f"{time_start:02}")

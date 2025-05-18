@@ -1,6 +1,6 @@
 students = []
 
-with open("C:\PROJECTS\PYTHON\CX50P\students.csv") as file:
+with open("/hlam/students.csv") as file:
     for line in file:
         name, house = line.rstrip().split(",")
         student = {"name": name, "house": house}
