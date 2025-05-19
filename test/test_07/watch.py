@@ -1,10 +1,8 @@
 import re
-import sys
 
 
 def main():
     print(parse(input("HTML: ")))
-    # print(parse('<iframe src="https://www.youtube.com/embed/xvFZjo5PgG0"></iframe>'))
 
 
 def parse(s):
