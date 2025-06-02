@@ -44,15 +44,13 @@ def main():
             # size = (1200, 1600)
 
             with Image.open(before) as img:
-                after_resized = ImageOps.fit(img, (600, 600))
-                after_resized.save("after_resized.jpg")
+                before = ImageOps.fit(img, (600, 600))
+                before.save("after_resized.jpg")
 
-            with Image.open(r"C:\PROJECTS\PYTHON\CX50P\shirt.png") as s_i, \
-                    Image.open(r"C:\PROJECTS\PYTHON\CX50P\after_resized.jpg") as a_r:
-                Image.Image.paste(s_i, a_r, mask=s_i)
-
-                after_resized.save("out.jpg")
-                # print(after_resized.size)
+            with Image.open(r"C:\PROJECTS\PYTHON\CX50P\after_resized.jpg") as a_r, \
+                    Image.open(r"C:\PROJECTS\PYTHON\CX50P\shirt.png") as s_i:
+                a_r.paste(s_i, mask=s_i)
+                a_r.save(after)
 
     except FileNotFoundError:
         sys.exit("File not found")
