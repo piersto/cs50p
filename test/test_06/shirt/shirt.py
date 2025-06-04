@@ -12,9 +12,6 @@ def main():
         before = sys.argv[1]
         after = sys.argv[2]
 
-        # before = "before.jpg"
-        # after = "after.jpg"
-
         if before.endswith(".png"):
             pass
         elif before.endswith(".jpg"):
@@ -39,19 +36,13 @@ def main():
             sys.exit("Input and output have different extensions")
         elif before.endswith(".jpeg") and not after.endswith(".jpeg"):
             sys.exit("Input and output have different extensions")
+
         else:
-            # shirt = Image.open("C:\PROJECTS\PYTHON\CX50P\shirt.png")
-            # size = (1200, 1600)
-
-            with Image.open(before) as img:
-                before = ImageOps.fit(img, (600, 600))
-                before.save("after_resized.jpg")
-
-            with Image.open(r"C:\PROJECTS\PYTHON\CX50P\after_resized.jpg") as a_r, \
-                    Image.open(r"C:\PROJECTS\PYTHON\CX50P\shirt.png") as s_i:
-                a_r.paste(s_i, mask=s_i)
-                a_r.save(after)
-
+            with Image.open(before) as img, Image.open(r"C:\PROJECTS\PYTHON\CX50P\shirt.png") as s_i:
+                img = ImageOps.fit(img, (600, 600))
+                img.paste(s_i, s_i)
+                img.save(after)
+        return after
     except FileNotFoundError:
         sys.exit("File not found")
 

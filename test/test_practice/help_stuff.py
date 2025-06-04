@@ -5,7 +5,6 @@ message = f"{message}, {name}. Welcome!"
 """
     Will print info about method upper in this case
 """
-
 print(help(str.upper))
 
 """
